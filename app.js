@@ -9,6 +9,9 @@ app.get('/', function (req, res) {
 app.get('/alpha', function (req, res) {
   res.send('Alpha');
 });
+app.get('/*', function (req, res) {
+	res.send('404');
+});
 
 app.listen(port, function(){
   console.log('Server started at ', port);
